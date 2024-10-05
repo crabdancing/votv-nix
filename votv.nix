@@ -66,7 +66,8 @@ in
       # regedit ${./use-theme-none.reg}
       # regedit ${./wine-breeze-dark.reg}
       ''
-        winetricks -q fontsmooth=rgb vcrun2022 dxvk
+        winetricks -q fontsmooth=rgb
+        winetricks -q vcrun2022 dxvk
         d="$WINEPREFIX/drive_c/${pname}"
         mkdir -p "$d"
         ${pkgs.ouch}/bin/ouch d ${src} -d "$d"
