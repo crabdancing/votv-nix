@@ -106,7 +106,6 @@ in
 
     desktopIcon = makeDesktopIcon {
       name = "votv";
-
       src = ./votv.png;
     };
 
