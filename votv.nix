@@ -100,8 +100,9 @@ in
         exec = pname;
         icon = pname;
         desktopName = "Voices of the Void";
-        genericName = "Weird game";
+        genericName = "Weird game with aliens";
         categories = ["X-Games"];
+        keywords = ["votv" "alien" "aliens" "job" "sim"];
       })
     ];
 
