@@ -100,7 +100,7 @@ in
         icon = pname;
         desktopName = "Voices of the Void";
         genericName = "Weird game";
-        categories = ["Games"];
+        categories = ["X-Games"];
       })
     ];
 
