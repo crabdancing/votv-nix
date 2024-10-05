@@ -29,10 +29,10 @@ in
   mkWindowsApp rec {
     inherit wine pname;
 
-    version = "07_0011";
+    version = "pa07_0011";
 
     src = builtins.fetchurl {
-      url = "https://archive.org/download/votv_20231027/pa07_0011.7z";
+      url = "https://archive.org/download/votv_20231027/${version}.7z";
       sha256 = "sha256:1vsjhyfadc5xm3w4x7a0km4vgyd4ycs2b66s0kdbmyb3725bd4ld";
     };
 
@@ -82,7 +82,7 @@ in
 
     winAppRun = ''
       mkdir -p "${stateDir}"
-      wine "$WINEPREFIX/drive_c/votv/pa${version}/WindowsNoEditor/VotV.exe" "$ARGS"
+      wine "$WINEPREFIX/drive_c/votv/${version}/WindowsNoEditor/VotV.exe" "$ARGS"
     '';
 
     winAppPostRun = "";
@@ -111,8 +111,8 @@ in
     };
 
     meta = with lib; {
-      description = "VOTV (Proton version)";
-      homepage = "https://www.votv.xyz/";
+      description = "Voices of the Voice packaged for NixOS";
+      homepage = "https://mrdrnose.itch.io/votv";
       license = licenses.unfree;
       maintainers = with maintainers; [];
       platforms = ["x86_64-linux"];
